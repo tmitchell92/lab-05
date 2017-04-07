@@ -98,17 +98,17 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 "The numbers 2,3,4 have a product of 24."
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
-
+//
 // Write your code here
-// function multiplyArray(testArray){ //eslint-disable-line
-//   var prodAB = multiply(testArray[0],testArray[1]);
-//   var prodABC = multiply(prodAB,testArray[2]);
-//   var arrayProd = [testArray[0]+ testArray[1] + testArray[2] + ' was passed in as an array of numbers, and ' + prodABC + 'is their product.'];
-//   console.log(prodAB);
-//   console.log(prodABC);
-//   console.log(arrayProd);
-//   }
-// }
+function prodArray(testArray){ //eslint-disable-line
+  var prodAB = multiply(testArray[0],testArray[1]);
+  var prodABC = multiply(prodAB,testArray[2]);
+  var multArray = [prodABC, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + prodABC];
+  console.log(prodAB);
+  console.log(prodABC);
+  console.log(multArray);
+  }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
