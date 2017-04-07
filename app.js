@@ -9,8 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
 var c = a + b;
 var array_sum = [c,'The sum of ' + a + ' and ' + b + ' is ' + c];
-console.log(c)
-console.log(array_sum)
+console.log(c);
+console.log(array_sum);
 
 }
 
@@ -27,7 +27,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+var c = a * b;
+var array_multiply = [c,'The product of ' + a + ' and ' + b + ' is ' + c];
+console.log(c);
+console.log(array_multiply);
 }
 
 // Here is the test for multiply(); uncomment it to run it
