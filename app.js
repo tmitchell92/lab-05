@@ -8,15 +8,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
 var c = a + b;
-var arraySum = [c,'The sum of ' + a + ' and ' + b + ' is ' + c];
-return c;
+var arraySum = [c,'The sum of ' + a + ' and ' + b + ' is ' + c + '.'];
+return arraySum
 // console.log(c);
-// console.log(arraySum);
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -29,14 +28,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
 var c = a * b;
-var arrayMultiply = [c,'The product of ' + a + ' and ' + b + ' is ' + c];
-return c;
+var arrayMultiply = [c,'The product of ' + a + ' and ' + b + ' is ' + c +'.'];
+return arrayMultiply;
 // console.log(c);
 // console.log(arrayMultiply);
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,20 +49,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-var sumAB= sum(a,b);
-console.log(sumAB)
-var sumABC= sum(sumAB,c);
-console.log(sumABC)
-var multAB= multiply(a,b);
-var multABC= multiply(multAB,c);
-var arraySumMultiply = [sumABC,multAB, a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC, 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multABC]
-console.log(sumABC);
-console.log(multABC);
-console.log(arraySumMultiply);
+var sumAB = sum(a,b)[0]
+var sumABC= sum(sumAB,c)[0];
+var multAB= multiply(a,b)[0];
+var multABC= multiply(multAB,c)[0];
+var arraySumMultiply = [sumABC,multAB, a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multABC +'.']
+return arraySumMultiply;
+console.log(arraySumMultiply)
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -78,17 +75,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-var sumAB = sum(testArray[0],testArray[1]);
-var sumABC = sum(sumAB,testArray[2]);
-var arraySum = [sumABC, testArray[0] + ', ' + testArray[1] + ', ' + testArray[2] + ' was passed in as an array of numbers, and ' + sumABC + 'is their sum.'];
-console.log(sumAB);
-console.log(sumABC);
-console.log(arraySum)
+var sumAB = sum(testArray[0],testArray[1])[0];
+var sumABC = sum(sumAB,testArray[2])[0];
+var arraySum = [sumABC, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumABC + ' is their sum.'];
+return arraySum;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -100,10 +95,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 //
 // Write your code here
-function prodArray(testArray){ //eslint-disable-line
-  var prodAB = multiply(testArray[0],testArray[1]);
-  var prodABC = multiply(prodAB,testArray[2]);
-  var multArray = [prodABC, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + prodABC];
+function multiplyArray(testArray){ //eslint-disable-line
+  var prodAB = multiply(testArray[0],testArray[1])[0];
+  var prodABC = multiply(prodAB,testArray[2])[0];
+  var multArray = [prodABC, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + prodABC + '.'];
+  return multArray;
   console.log(prodAB);
   console.log(prodABC);
   console.log(multArray);
@@ -111,4 +107,4 @@ function prodArray(testArray){ //eslint-disable-line
 
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
