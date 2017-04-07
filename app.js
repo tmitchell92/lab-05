@@ -9,13 +9,14 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
 var c = a + b;
 var array_sum = [c,'The sum of ' + a + ' and ' + b + ' is ' + c];
-console.log(c);
-console.log(array_sum);
+return c;
+// console.log(c);
+// console.log(array_sum);
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+// testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -29,8 +30,9 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b){ //eslint-disable-line
 var c = a * b;
 var array_multiply = [c,'The product of ' + a + ' and ' + b + ' is ' + c];
-console.log(c);
-console.log(array_multiply);
+return c;
+// console.log(c);
+// console.log(array_multiply);
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -48,7 +50,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+var sumAB= sum(a,b);
+console.log(sumAB)
+var sumABC= sum(sumAB,c);
+console.log(sumABC)
+var multAB= multiply(a,b);
+var multABC= multiply(multAB,c);
+var array_SumMultiply = [sumABC,multAB, a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC, 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multABC]
+console.log(sumABC);
+console.log(multABC);
+console.log(array_SumMultiply);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
